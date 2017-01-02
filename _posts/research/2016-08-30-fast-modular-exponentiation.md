@@ -28,17 +28,15 @@ description: Fast modular exponentiation
 
 而如果$$b$$不是2的整数次幂的形式，我们可以把$$b$$分解为若干个2的整数次幂求和的形式。比如$$b = 117$$，写成二进制的形式为$$b = (Binary)1110101 = {2^0} + {2^2} + {2^4} + {2^5} + {2^6} = 1 + 4 + 16 + 32 + 64$$，因此，$$({a^b})\% m = ({a^{117}})\% m = ({a^{1 + 4 + 16 + 32 + 64}})\% m = ({a^1}\% m \times {a^4}\% m \times {a^{16}}\% m \times {a^{32}}\% m \times {a^{64}}\% m)\% m$$
 
-<pre><code class="java">
-// java example
-public long powMod(long a, long b, long m) {
-    if (m == 1) return 0;
-    if (b == 0) return 1;
-    if (b == 1) return a;
-    long x = powMod(a, b/2, m);
-    x = x * x % m;
-    if(b % 2 == 1) x = x * a % m;
-    return x;
-}
-</code></pre>
+	// java example
+	public long powMod(long a, long b, long m) {
+	    if (m == 1) return 0;
+	    if (b == 0) return 1;
+	    if (b == 1) return a;
+	    long x = powMod(a, b/2, m);
+	    x = x * x % m;
+	    if(b % 2 == 1) x = x * a % m;
+	    return x;
+	}
 
 [reference](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/fast-modular-exponentiation)
