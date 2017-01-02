@@ -1,0 +1,50 @@
+# Site settings
+title: Hoyle's pajamas
+email: wanghoyle@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Hoyle's personal blogs
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: http://hoyle.wang # the base hostname & protocol for your site
+rss_url: /pages/feed.xml
+author: Hoyle Wang
+
+# Sidebar filter
+# Choose 'tag' or 'category' as filter in sidebar.
+filter: 'category'
+recent_num: 20
+
+# Social account
+twitter: wanghoyle
+weibo: wanghoyle
+github: wanghoyle
+instagram: wanghoyle
+linkedin: wanghoyle
+
+# avatar and Favicon
+avatar: /assets/img/avatar_b.jpg
+favicon: /assets/img/avatar_b.jpg
+
+# disqus config
+disqus:
+  shortname: hoyle
+
+# google analytics config
+ga:
+  id: UA-64548868-2
+  url: hoyle.wang
+
+# Build settings
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+highlighter: rouge
+mathjax: enabled
+sass:
+  style: compressed
+
+# Jekyll Plugin
+# https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
