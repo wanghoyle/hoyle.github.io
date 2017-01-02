@@ -5,11 +5,14 @@ layout: post
 
 ## 对博客的理解
 
-我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。
+Hi, My name is Haoyu Wang. Welcome to my homepage!
 
-通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。
+I received my bachelor degree in University of Science and Technology of China (USTC), 2012. 
+And now I am a PhD candidate of the Department of Electronic Engineering and Information Science, USTC.
 
-分类有助于我们对信息的隔离，例如我把自己的记录分成这几类：技术、工具、资源、生活、读书和旅游。这是我生活重中最重要的几个类别，我希望把自己的一些心得和尝试写在相应分类中。
+My research interests include digital predistortion linearization, behavioral modeling of power amplifiers, digital signal processing and mobile software development.
+
+I am a sports man and I love playing soccer very much. AC Milan is may favorite team. I also love mountain cycling and drawing something.
 
 ## 博客平台
 
