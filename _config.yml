@@ -26,7 +26,7 @@ favicon: /assets/img/avatar_b.jpg
 
 # disqus config
 disqus:
-  shortname: wanghoyle
+  shortname: hoyle-wang
 
 # google analytics config
 ga:
