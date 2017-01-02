@@ -11,11 +11,11 @@ description: Differences between \(l_1\) and \(l_2\) norm
 ## Definition:
 $$l_1$$-norm, a.k.a. least absolute deviations (LAD), least absolute errors (LAE), and is similar to mean absolute errors (MAE). It is basically minimizing the sum (mean) of the absolute differences (errors) between the target value $$d_i$$ and the estimated values $$f\left(d_i\right)$$:
 
-$$\begin{equation} \sum\limits_{i = 1}^n {| d_i - f\left(d_i\right) |} = {\left\| {\bf{d}} - f\left({\bf{d}}\right) \right\|}_1 \end{equation}$$
+$$\begin{equation}\tag{1} \sum\limits_{i = 1}^n {| d_i - f\left(d_i\right) |} = {\left\| {\bf{d}} - f\left({\bf{d}}\right) \right\|}_1 \end{equation}$$
 
 $$l_2$$-norm, a.k.a. least squares errors (LSE), and is similar to mean square errors (MSE). It is basically minimizing the sum (mean) of the square of the differences (errors) between the target value $$d_i$$ and the estimated values $$f\left(d_i\right)$$:
 
-$$\begin{equation} \sum\limits_{i = 1}^n {| d_i - f\left(d_i\right) |}^2 = {\left\| {\bf{d}} - f\left({\bf{d}}\right) \right\|}_2^2 \end{equation}$$
+$$\begin{equation}\tag{2} \sum\limits_{i = 1}^n {| d_i - f\left(d_i\right) |}^2 = {\left\| {\bf{d}} - f\left({\bf{d}}\right) \right\|}_2^2 \end{equation}$$
 
 ## Differences:
 - $$l_1$$ regression

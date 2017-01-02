@@ -54,7 +54,7 @@ $(function() {
       main.scroll(function(){
         var nScrollHight = $(this)[0].scrollHeight;
         var nScrollTop = $(this)[0].scrollTop;
-        if(!ds_loaded && nScrollTop + main.height() >= nScrollHight - 100) {
+        // if(!ds_loaded && nScrollTop + main.height() >= nScrollHight - 100) {
           $.ajax({
             type: 'GET',
             url: 'http://' + disqus_shortname + '.disqus.com/embed.js',
@@ -62,11 +62,16 @@ $(function() {
             cache: true
           });
           ds_loaded = true;
-        }
+        // }
       });
     {% endif %}
     // your scripts
     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    // $(this).html('Loading...');
+    // var disqus_shortname = 'hoyle-wang';
+    // var that = this;
+    // BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()}); //这是一个加载js的函数
+
   };
   afterPjax();
 
