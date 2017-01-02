@@ -67,7 +67,7 @@ $(function() {
     {% endif %}
     // your scripts
     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-
+    hljs.initHighlightingOnLoad();
   };
   afterPjax();
 
