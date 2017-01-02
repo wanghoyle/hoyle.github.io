@@ -54,7 +54,7 @@ $(function() {
       main.scroll(function(){
         var nScrollHight = $(this)[0].scrollHeight;
         var nScrollTop = $(this)[0].scrollTop;
-        // if(!ds_loaded && nScrollTop + main.height() >= nScrollHight - 100) {
+        if(!ds_loaded && nScrollTop + main.height() >= nScrollHight - 100) {
           $.ajax({
             type: 'GET',
             url: 'http://' + disqus_shortname + '.disqus.com/embed.js',
@@ -62,7 +62,7 @@ $(function() {
             cache: true
           });
           ds_loaded = true;
-        // }
+        }
       });
     {% endif %}
     // your scripts
