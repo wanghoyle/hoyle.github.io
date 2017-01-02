@@ -37,7 +37,7 @@ description: Gauss-Newton 和 Levenberg-Marquardt 法求解非线性最小二乘
 
 定义标量函数
 \begin{equation}
-  f_i\left( \bf{m} \right) = \frac{ G(\bf{m})_i - \bf{d}_i }{ \sigma _i },i = 1,2, \ldots ,m\tag{2}
+  f_i\left( \bf{m} \right) = \frac{ G(\bf{m})_i - \bf{d}_i }{ \sigma _i },i = 1,2, \ldots ,m \tag{2}
 \end{equation}
 
 以及向量函数
@@ -47,27 +47,27 @@ description: Gauss-Newton 和 Levenberg-Marquardt 法求解非线性最小二乘
 
 因此
 \begin{equation}
-  f\left( {\bf{m}} \right) = \sum\limits_{i = 1}^m {f_i \left( \bf{m} \right)^2} = \sum\limits_{i = 1}^m {\left\|\left\| \bf{F} \left( \bf{m} \right) \right\|\right\|_2^2}\tag{4}
+  f\left( {\bf{m}} \right) = \sum\limits_{i = 1}^m {f_i \left( \bf{m} \right)^2} = \sum\limits_{i = 1}^m {\left\|\left\| \bf{F} \left( \bf{m} \right) \right\|\right\|_2^2} \tag{4}
 \end{equation}
 
 $$ f\left( {\bf{m}} \right)$$ 的梯度可以写为其中每一项的梯度和，然后写成以下矩阵形式
 \begin{equation}
-  \nabla f\left( \bf{m} \right) = \sum\limits_{i = 1}^m {\nabla \left( {f_i {\left( \bf{m} \right)}^2} \right)} = 2\bf{J}{\left( \bf{m} \right)^T}\bf{F}\left( \bf{m} \right)\tag{5}
+  \nabla f\left( \bf{m} \right) = \sum\limits_{i = 1}^m {\nabla \left( {f_i {\left( \bf{m} \right)}^2} \right)} = 2\bf{J}{\left( \bf{m} \right)^T}\bf{F}\left( \bf{m} \right) \tag{5}
 \end{equation}
 
 其中 $$ \bf{J}\left( \bf{m} \right)$$ 是 $$ \bf{F}\left( \bf{m} \right)$$ 的雅克比矩阵。与此类似，我们用 $$ f_i\left( \bf{m} \right)$$ 项得到了 $$ f\left( \bf{m} \right)$$ 的海森矩阵。因此
 \begin{equation}
-  \bf{H}\left( f \left( \bf{m} \right) \right) = 2\bf{J}{\left( \bf{m} \right)^T} \bf{J} \left( \bf{m} \right) + \bf{Q} \left( \bf{m} \right)\tag{6}
+  \bf{H}\left( f \left( \bf{m} \right) \right) = 2\bf{J}{\left( \bf{m} \right)^T} \bf{J} \left( \bf{m} \right) + \bf{Q} \left( \bf{m} \right) \tag{6}
 \end{equation}
 
 其中
 \begin{equation}
-  \bf{Q}\left( \bf{m} \right) = 2\sum\limits_{i = 1}^m {f_i \left( \bf{m} \right) \bf{H} \left( {f_i \left( \bf{m} \right)} \right)}\tag{7}
+  \bf{Q}\left( \bf{m} \right) = 2\sum\limits_{i = 1}^m {f_i \left( \bf{m} \right) \bf{H} \left( {f_i \left( \bf{m} \right)} \right)} \tag{7}
 \end{equation}
 
 在**高斯-牛顿（GN）法**中，我们忽略(6)中的 $$ \bf{Q} \left( \bf{m} \right)$$ 项来近似海森矩阵
 \begin{equation}
-  \bf{H} \left( {f\left( {\bf{m}} \right)} \right) \approx 2{\bf{J}}{\left( {\bf{m}} \right)^T}{\bf{J}}\left( {\bf{m}} \right)\tag{8}
+  \bf{H} \left( {f\left( {\bf{m}} \right)} \right) \approx 2{\bf{J}}{\left( {\bf{m}} \right)^T}{\bf{J}}\left( {\bf{m}} \right) \tag{8}
 \end{equation}
 
 在非线性回归中，我们期望在接近于最优值 $$\bf{m}^*$$ 时 $$f_i \left( \bf{m} \right)$$很小，以至于在解的领域内这应该是一个合理的近似。相反，对于 $$f_i \left( \bf{m} \right)$$ 很大的非线性最小二乘问题，这就不是一个合理的近似了。
@@ -83,19 +83,19 @@ $$ f\left( {\bf{m}} \right)$$ 的梯度可以写为其中每一项的梯度和�
 
 在**利文贝格-麦夸特（LM）法**中，GN法模型更新方程 (9) 被修改为
 \begin{equation}
-  \left( \bf{J} \left( \bf{m}^k \right)^T \bf{J} \left( \bf{m}^k \right) + \lambda \bf{I} \right)\Delta \bf{m} = - \bf{J} {\left( \bf{m}^k \right)^T} \bf{F}\left( \bf{m}^k \right)\tag{10}
+  \left( \bf{J} \left( \bf{m}^k \right)^T \bf{J} \left( \bf{m}^k \right) + \lambda \bf{I} \right)\Delta \bf{m} = - \bf{J} {\left( \bf{m}^k \right)^T} \bf{F}\left( \bf{m}^k \right) \tag{10}
 \end{equation}
 
 其中大于零的参数 $$ \lambda$$ 在迭代过程中是自适应的以保证收敛。进行如此修改的一个重要原因是为了保证 (10) 式左边的矩阵是非奇异的。因为此时系统方程中的矩阵是对称且正定的，我们可以使用 Cholesky 分解来有效地求解系统模型的更新步长 $$ \delta \bf{m}$$。
 
 对于很大的 $$ \lambda$$,
 \begin{equation}
-  \bf{J}{\left( \bf{m}^k \right)^T} \bf{J} \left( \bf{m}^k \right) + \lambda \bf{I} \approx \lambda \bf{I}\tag{11}
+  \bf{J}{\left( \bf{m}^k \right)^T} \bf{J} \left( \bf{m}^k \right) + \lambda \bf{I} \approx \lambda \bf{I} \tag{11}
 \end{equation}
 
 那么 (10) 式的解是
 \begin{equation}
-  \Delta \bf{m} \approx - \frac{1}{\lambda} \nabla f\left( \bf{m} \right)\tag{12}
+  \Delta \bf{m} \approx - \frac{1}{\lambda} \nabla f\left( \bf{m} \right) \tag{12}
 \end{equation}
 
 这被称为**最速下降**步长，意味着算法简单地沿着使 $$ f\left( \bf{m} \right)$$ 下降最快的负梯度方向前进。最速下降法收敛很慢但是必然收敛到局部最小值。相反，对于很小的 $$ \lambda$$ ，LM法又变回了GN法 (9)，而GN法收敛快但是不一定收敛。
